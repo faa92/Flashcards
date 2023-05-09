@@ -16,3 +16,11 @@ CREATE TABLE sub_theme(
     sub_theme_title     TEXT NOT NULL,
     theme_id            BIGINT       NOT NULL REFERENCES theme (theme_id)
 );
+
+CREATE TABLE card(
+    card_id             BIGSERIAL PRIMARY KEY,
+    question            TEXT NOT NULL,
+    answer              TEXT NOT NULL,
+    is_remember         BOOLEAN,
+    sub_theme_id        BIGINT NOT NULL REFERENCES sub_theme(sub_theme_id)
+);
