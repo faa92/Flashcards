@@ -54,6 +54,23 @@ UPDATE theme
 SET theme_title = 'ENGLISH'
 WHERE theme_title = 'MATH';
 
+UPDATE card
+SET learned = true
+WHERE card_id = 3;
+
+UPDATE card
+SET learned = true
+WHERE card_id = 5;
+
+UPDATE card
+SET learned = false
+WHERE card_id IN (1, 3, 5, 7, 12);
+
+UPDATE card
+SET learned = true
+WHERE card_id = 3
+   OR card_id = 2;
+
 DELETE
 FROM card
 WHERE card_id > 2;
@@ -98,28 +115,9 @@ WHERE card.theme_id = 2
   AND card_id > 6
 ORDER BY card_id LIMIT 2;
 
-UPDATE card
-SET learned = true
-WHERE card_id = 3;
-
-UPDATE card
-SET learned = true
-WHERE card_id = 5;
-
-UPDATE card
-SET learned = false
-WHERE card_id IN (1, 3, 5, 7, 12);
-
-UPDATE card
-SET learned = true
-WHERE card_id = 3
-   OR card_id = 2;
-
-
-
 SELECT theme.id          AS id,
        theme.theme_title AS title,
        count(card_id)       FILTER ( WHERE card.learned )  AS learned_cards_count, count(card_id) AS total_cards_count
 FROM theme
-         LEFT JOIN card ON theme.id = card.theme_id
+            LEFT JOIN card ON theme.id = card.theme_id
 GROUP BY theme.id;
