@@ -54,7 +54,7 @@ public class CardJdbcRepository implements ICardRepository {
     }
 
     @Override
-    public void save(long idTheme, String question, String answer) {
+    public void save(long idTheme, String question, String answer, boolean learned) {
         String sql = """
                 INSERT INTO card (theme_id, question, answer, learned)
                 VALUES (?, ?, ?, ?)""";
@@ -62,9 +62,11 @@ public class CardJdbcRepository implements ICardRepository {
                 Connection connection = db.getConnection();
                 PreparedStatement pStatement = connection.prepareStatement(sql);
         ) {
-//            int i = 1; ???????????????????????????????????/
-            pStatement.setLong(i, idTheme);
-            pStatement.setString(i++, );
+            int i = 1;
+            pStatement.setLong(i++, idTheme);
+            pStatement.setString(i++, question);
+            pStatement.setString(i++, answer);
+            pStatement.setBoolean(i++, learned);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -74,11 +76,39 @@ public class CardJdbcRepository implements ICardRepository {
 
     @Override
     public void updateIsLearned(long idCard, boolean learned) {
+        String sql = """
+                UPDATE card
+                SET learned = ?
+                WHERE card_id = ?""";
+        try (
+                Connection connection = db.getConnection();
+                PreparedStatement pStatement = connection.prepareStatement(sql);
+        ) {
+            int i = 1;
+            pStatement.setLong(i++, idCard);
+            pStatement.setBoolean(i++, learned);
+            pStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
     @Override
     public void remove(long idCard) {
+        String sql = """
+                DELETE FROM  card
+                WHERE card_id = ?""";
+        try (
+                Connection connection = db.getConnection();
+                PreparedStatement pStatement = connection.prepareStatement(sql);
+        ) {
+            pStatement.setLong(1, idCard);
+            pStatement.executeUpdate();
 
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

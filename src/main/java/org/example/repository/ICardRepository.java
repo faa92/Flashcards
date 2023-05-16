@@ -7,7 +7,7 @@ import java.util.List;
 public interface ICardRepository {
     List<Card> findAllCardsByTheme(long idTheme, long idCard);
 
-    void save(long idTheme, String question, String answer boolean learned);
+    void save(long idTheme, String question, String answer, boolean learned);
 
     void updateIsLearned(long idCard, boolean learned);
 
