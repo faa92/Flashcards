@@ -1,15 +1,15 @@
 package org.example.model;
 
 public class Card {
-    private final long idCard;
     private final long idTheme;
+    private final long idCard;
     private final String question;
     private final String answer;
     private boolean learned;
 
-    public Card(long idCard, long idTheme, String question, String answer, boolean learned) {
-        this.idCard = idCard;
+    public Card(long idTheme, long idCard, String question, String answer, boolean learned) {
         this.idTheme = idTheme;
+        this.idCard = idCard;
         this.question = question;
         this.answer = answer;
         this.learned = learned;

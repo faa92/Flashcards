@@ -60,7 +60,7 @@ public class ThemeJdbcRepository implements IThemeRepository {
                 Connection connection = db.getConnection();
                 PreparedStatement pStatement = connection.prepareStatement(sql);
         ) {
-            pStatement.setString(1, title);
+            pStatement.setString(2, title);
             pStatement.executeUpdate();
 
         } catch (SQLException e) {

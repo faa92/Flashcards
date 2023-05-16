@@ -5,11 +5,11 @@ import org.example.model.Card;
 import java.util.List;
 
 public interface ICardRepository {
-    List<Card> findAllCardsByTheme(long idTheme);
+    List<Card> findAllCardsByTheme(long idTheme, long idCard);
 
-    void save(long idTheme, boolean done, String title);
+    void save(long idTheme, String question, String answer boolean learned);
 
-    void updateIsDone(long idCard, boolean done);
+    void updateIsLearned(long idCard, boolean learned);
 
     void remove(long idCard);
 }

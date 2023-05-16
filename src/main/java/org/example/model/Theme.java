@@ -4,13 +4,13 @@ public class Theme {
     private final long idTheme;
     private final String title;
     private final long totalCardsCount;
-    private final long doneCardsCount;
+    private final long learnedCardsCount;
 
-    public Theme(long idTheme, String title, long totalCardsCount, long doneCardsCount) {
+    public Theme(long idTheme, String title, long totalCardsCount, long learnedCardsCount) {
         this.idTheme = idTheme;
         this.title = title;
         this.totalCardsCount = totalCardsCount;
-        this.doneCardsCount = doneCardsCount;
+        this.learnedCardsCount = learnedCardsCount;
     }
 
     public long getIdTheme() {
@@ -26,7 +26,7 @@ public class Theme {
     }
 
     public long getDoneCardsCount() {
-        return doneCardsCount;
+        return learnedCardsCount;
     }
 
     @Override
@@ -35,7 +35,7 @@ public class Theme {
                 "idTheme=" + idTheme +
                 ", title='" + title + '\'' +
                 ", totalCardsCount=" + totalCardsCount +
-                ", doneCardsCount=" + doneCardsCount +
+                ", doneCardsCount=" + learnedCardsCount +
                 '}';
     }
 }
