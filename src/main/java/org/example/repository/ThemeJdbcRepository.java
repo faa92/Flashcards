@@ -20,12 +20,13 @@ public class ThemeJdbcRepository implements IThemeRepository {
     @Override
     public List<Theme> findAllThemes(long idTheme) {
         String sql = """
-                SELECT theme.id                                      AS id,
-                       theme.theme_title                             AS title,
-                       count(card_id) FILTER ( WHERE card.learned )  AS learned_cards_count,
-                       count(card_id)                                AS total_cards_count
+                SELECT theme.id                                          AS id,
+                       theme.theme_title                                 AS title,
+                       count(card_id)                                    AS total_cards_count,
+                       count(card_id) FILTER (WHERE card.learned)        AS learned_cards_count
                 FROM theme
-                            LEFT JOIN card ON theme.id = card.theme_id
+                            LEFT JOIN card ON card.theme_id = theme_id
+                WHERE theme.id = ?
                 GROUP BY theme.id;""";
         try (
                 Connection connection = db.getConnection();
@@ -38,7 +39,7 @@ public class ThemeJdbcRepository implements IThemeRepository {
             while (resultSet.next()) {
                 result.add(new Theme(
                         resultSet.getLong("id"),
-                        resultSet.getString("theme_title"),
+                        resultSet.getString("title"),
                         resultSet.getLong("total_cards_count"),
                         resultSet.getLong("learned_cards_count")
                 ));
@@ -53,14 +54,14 @@ public class ThemeJdbcRepository implements IThemeRepository {
     @Override
     public void save(String title) {
         String sql = """
-                INSERT INTO theme (id, theme_title)
-                VALES (?, ?)
+                INSERT INTO theme (theme_title)
+                VALUES (?)
                 """;
         try (
                 Connection connection = db.getConnection();
                 PreparedStatement pStatement = connection.prepareStatement(sql);
         ) {
-            pStatement.setString(2, title);
+            pStatement.setString(1, title);
             pStatement.executeUpdate();
 
         } catch (SQLException e) {

@@ -5,7 +5,7 @@ import org.example.model.Card;
 import java.util.List;
 
 public interface ICardRepository {
-    List<Card> findAllCardsByTheme(long idTheme, long idCard);
+    List<Card> findAllCardsByTheme(long idTheme);
 
     void save(long idTheme, String question, String answer, boolean learned);
 

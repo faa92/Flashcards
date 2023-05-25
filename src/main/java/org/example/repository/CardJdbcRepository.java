@@ -18,7 +18,7 @@ public class CardJdbcRepository implements ICardRepository {
     }
 
     @Override
-    public List<Card> findAllCardsByTheme(long idTheme, long idCard) {
+    public List<Card> findAllCardsByTheme(long idTheme) {
         String sql = """
                 SELECT card_id             AS id,
                        theme_id            AS theme_id,
@@ -26,21 +26,18 @@ public class CardJdbcRepository implements ICardRepository {
                        answer              AS answer,
                        learned             AS learned
                 FROM card
-                WHERE to_do_item.folder_id = ?""";
+                WHERE card.theme_id = ?""";
         try (
                 Connection connection = db.getConnection();
                 PreparedStatement pStatement = connection.prepareStatement(sql);
         ) {
-            int i = 1;
-            pStatement.setLong(i++, idTheme);
-            pStatement.setLong(i++, idCard);
+            pStatement.setLong(1, idTheme);
 
             ResultSet resultSet = pStatement.executeQuery();
             List<Card> result = new ArrayList<>();
             while (resultSet.next()) {
                 result.add(new Card(
                         resultSet.getLong("id"),
-                        resultSet.getLong("theme_id"),
                         resultSet.getString("question"),
                         resultSet.getString("answer"),
                         resultSet.getBoolean("learned")
@@ -62,11 +59,11 @@ public class CardJdbcRepository implements ICardRepository {
                 Connection connection = db.getConnection();
                 PreparedStatement pStatement = connection.prepareStatement(sql);
         ) {
-            int i = 1;
-            pStatement.setLong(i++, idTheme);
-            pStatement.setString(i++, question);
-            pStatement.setString(i++, answer);
-            pStatement.setBoolean(i++, learned);
+            pStatement.setLong(1, idTheme);
+            pStatement.setString(2, question);
+            pStatement.setString(3, answer);
+            pStatement.setBoolean(4, learned);
+            pStatement.executeUpdate();
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -84,9 +81,8 @@ public class CardJdbcRepository implements ICardRepository {
                 Connection connection = db.getConnection();
                 PreparedStatement pStatement = connection.prepareStatement(sql);
         ) {
-            int i = 1;
-            pStatement.setLong(i++, idCard);
-            pStatement.setBoolean(i++, learned);
+            pStatement.setBoolean(1, learned);
+            pStatement.setLong(2, idCard);
             pStatement.executeUpdate();
 
         } catch (SQLException e) {

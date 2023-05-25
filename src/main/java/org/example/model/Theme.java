@@ -31,11 +31,10 @@ public class Theme {
 
     @Override
     public String toString() {
-        return "Theme{" +
-                "idTheme=" + idTheme +
-                ", title='" + title + '\'' +
-                ", totalCardsCount=" + totalCardsCount +
-                ", doneCardsCount=" + learnedCardsCount +
-                '}';
+        return " Theme" +
+                " idTheme = " + idTheme +
+                " title = " + title +
+                " totalCardsCount = " + totalCardsCount +
+                " learnedCardsCount = " + learnedCardsCount + "\n";
     }
 }
