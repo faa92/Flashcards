@@ -1,6 +1,8 @@
 package org.example;
 
+import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import org.example.model.Card;
 import org.example.model.Theme;
 import org.example.repository.CardJdbcRepository;
 import org.example.repository.ThemeJdbcRepository;
@@ -10,17 +12,18 @@ import java.util.List;
 public class ApplicationFlashcards {
 
     public static void main(String[] args) {
-        HikariDataSource dataSource = new HikariDataSource();
-        dataSource.setJdbcUrl(System.getenv("FLASH_CARDS_URL"));
-        dataSource.setUsername(System.getenv("FLASH_CARDS_USER"));
-        dataSource.setPassword(System.getenv("FLASH_CARDS_PASSWORD"));
+        HikariConfig hikariConfig = new HikariConfig();
+        hikariConfig.setJdbcUrl(System.getenv("FLASH_CARDS_URL"));
+        hikariConfig.setUsername(System.getenv("FLASH_CARDS_USER"));
+        hikariConfig.setPassword(System.getenv("FLASH_CARDS_PASSWORD"));
 
+        try (HikariDataSource hikariDataSource = new HikariDataSource(hikariConfig)) {
 
-        ThemeJdbcRepository themeJdbcRepository = new ThemeJdbcRepository(dataSource);
-        CardJdbcRepository cardJdbcRepository = new CardJdbcRepository(dataSource);
+            ThemeJdbcRepository themeJdbcRepository = new ThemeJdbcRepository(hikariDataSource);
+            CardJdbcRepository cardJdbcRepository = new CardJdbcRepository(hikariDataSource);
 
-        List<Theme> allThemes = themeJdbcRepository.findAllThemes(1);
-//        List<Card> allCardsByTheme = cardJdbcRepository.findAllCardsByTheme(1);
+            List<Theme> allThemes = themeJdbcRepository.findThemeById(1);
+            List<Card> allCardsByTheme = cardJdbcRepository.findAllCardsByTheme(1);
 
 //        themeJdbcRepository.save("History");
 //        themeJdbcRepository.remove(4);
@@ -29,9 +32,8 @@ public class ApplicationFlashcards {
 //        cardJdbcRepository.remove(17);
 //        cardJdbcRepository.updateIsLearned(1, true);
 
-        System.out.println(allThemes);
-//        System.out.println(allCardsByTheme);
-
-
+            System.out.println(allThemes);
+            System.out.println(allCardsByTheme);
+        }
     }
 }

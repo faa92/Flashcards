@@ -18,7 +18,7 @@ public class ThemeJdbcRepository implements IThemeRepository {
     }
 
     @Override
-    public List<Theme> findAllThemes(long idTheme) {
+    public List<Theme> findThemeById(long idTheme) {
         String sql = """
                 SELECT theme.id                                          AS id,
                        theme.theme_title                                 AS title,

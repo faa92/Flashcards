@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00157e1b-58b6-4478-98f2-e17ff8690663" name="Changes" comment="add Hikari">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+    <list default="true" id="00157e1b-58b6-4478-98f2-e17ff8690663" name="Changes" comment="add logback.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/ol/courseproject2/src/main/java/com/godev/flashcards/FlashcardsApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ol/courseproject2/src/main/java/com/godev/flashcards/exception/RepositoryException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ol/courseproject2/src/main/java/com/godev/flashcards/model/Flashcard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ol/courseproject2/src/main/java/com/godev/flashcards/model/FlashcardDeck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ol/courseproject2/src/main/java/com/godev/flashcards/repository/FlashcardDeckJdbcRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ol/courseproject2/src/main/java/com/godev/flashcards/repository/FlashcardDeckRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ol/courseproject2/src/main/java/com/godev/flashcards/repository/FlashcardJdbcRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ol/courseproject2/src/main/java/com/godev/flashcards/repository/FlashcardRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ol/courseproject2/src/main/java/com/godev/flashcards/repository/JdbcDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ol/courseproject2/src/main/resources/db/migration/V1__initial_schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ol/courseproject2/src/main/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ApplicationFlashcards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ApplicationFlashcards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ol/courseproject2/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ol/courseproject2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ol/courseproject2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ol/courseproject2/src/main/java/com/godev/flashcards/Application.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +174,7 @@
       <workItem from="1684952394939" duration="1416000" />
       <workItem from="1685028004041" duration="11260000" />
       <workItem from="1685115777779" duration="1945000" />
-      <workItem from="1685132909346" duration="2183000" />
+      <workItem from="1685132909346" duration="4305000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1683551466873</created>
@@ -288,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685134232373</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="add logback.xml">
+      <created>1685135542237</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1685135542237</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +343,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="review" />
     <MESSAGE value="add Hikari" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Hikari" />
+    <MESSAGE value="add logback.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="add logback.xml" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
