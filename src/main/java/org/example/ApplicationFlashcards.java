@@ -1,18 +1,18 @@
 package org.example;
 
+import com.zaxxer.hikari.HikariDataSource;
 import org.example.model.Theme;
 import org.example.repository.CardJdbcRepository;
 import org.example.repository.ThemeJdbcRepository;
-import org.postgresql.ds.PGSimpleDataSource;
 
 import java.util.List;
 
 public class ApplicationFlashcards {
 
     public static void main(String[] args) {
-        PGSimpleDataSource dataSource = new PGSimpleDataSource();
-        dataSource.setUrl(System.getenv("FLASH_CARDS_URL"));
-        dataSource.setUser(System.getenv("FLASH_CARDS_USER"));
+        HikariDataSource dataSource = new HikariDataSource();
+        dataSource.setJdbcUrl(System.getenv("FLASH_CARDS_URL"));
+        dataSource.setUsername(System.getenv("FLASH_CARDS_USER"));
         dataSource.setPassword(System.getenv("FLASH_CARDS_PASSWORD"));
 
 

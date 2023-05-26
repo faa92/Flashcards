@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00157e1b-58b6-4478-98f2-e17ff8690663" name="Changes" comment="fix">
+    <list default="true" id="00157e1b-58b6-4478-98f2-e17ff8690663" name="Changes" comment="review">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/ThemeJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/ThemeJdbcRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ApplicationFlashcards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ApplicationFlashcards.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +28,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -161,6 +160,7 @@
       <workItem from="1684952394939" duration="1416000" />
       <workItem from="1685028004041" duration="11260000" />
       <workItem from="1685115777779" duration="1945000" />
+      <workItem from="1685132909346" duration="1022000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1683551466873</created>
@@ -274,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685054057253</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="review">
+      <created>1685133047904</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1685133047904</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +313,8 @@
     <MESSAGE value="add CardJdbcRepository&#10;i++?" />
     <MESSAGE value="add CardJdbcRepository" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="review" />
+    <option name="LAST_COMMIT_MESSAGE" value="review" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
