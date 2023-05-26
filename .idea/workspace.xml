@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00157e1b-58b6-4478-98f2-e17ff8690663" name="Changes" comment="add CardJdbcRepository">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Client.java" afterDir="false" />
+    <list default="true" id="00157e1b-58b6-4478-98f2-e17ff8690663" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ApplicationFlashcards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ApplicationFlashcards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Theme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Theme.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/CardJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/CardJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/ICardRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/ICardRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/repository/ThemeJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/repository/ThemeJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__update_delete_select.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__update_delete_select.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +159,8 @@
       <workItem from="1684510649844" duration="8195000" />
       <workItem from="1684943492303" duration="321000" />
       <workItem from="1684952394939" duration="1416000" />
-      <workItem from="1685028004041" duration="10821000" />
+      <workItem from="1685028004041" duration="11260000" />
+      <workItem from="1685115777779" duration="1945000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1683551466873</created>
@@ -274,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684335309175</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix">
+      <created>1685054057253</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1685054057253</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +305,8 @@
     <MESSAGE value=" CardJdbcRepository" />
     <MESSAGE value="add CardJdbcRepository&#10;i++?" />
     <MESSAGE value="add CardJdbcRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="add CardJdbcRepository" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>

@@ -25,7 +25,7 @@ public class ThemeJdbcRepository implements IThemeRepository {
                        count(card_id)                                    AS total_cards_count,
                        count(card_id) FILTER (WHERE card.learned)        AS learned_cards_count
                 FROM theme
-                            LEFT JOIN card ON card.theme_id = theme_id
+                            LEFT JOIN card ON theme.id = card.theme_id
                 WHERE theme.id = ?
                 GROUP BY theme.id;""";
         try (

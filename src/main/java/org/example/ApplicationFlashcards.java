@@ -19,7 +19,7 @@ public class ApplicationFlashcards {
         ThemeJdbcRepository themeJdbcRepository = new ThemeJdbcRepository(dataSource);
         CardJdbcRepository cardJdbcRepository = new CardJdbcRepository(dataSource);
 
-        List<Theme> allThemes = themeJdbcRepository.findAllThemes(3);
+        List<Theme> allThemes = themeJdbcRepository.findAllThemes(1);
 //        List<Card> allCardsByTheme = cardJdbcRepository.findAllCardsByTheme(1);
 
 //        themeJdbcRepository.save("History");
