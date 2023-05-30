@@ -4,7 +4,7 @@ import org.example.model.Theme;
 
 import java.util.List;
 
-public interface IThemeRepository {
+public interface ThemeRepository {
     List<Theme> findThemeById(long idTheme);
 
     void save(String title);

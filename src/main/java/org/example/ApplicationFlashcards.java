@@ -25,12 +25,7 @@ public class ApplicationFlashcards {
             List<Theme> allThemes = themeJdbcRepository.findThemeById(1);
             List<Card> allCardsByTheme = cardJdbcRepository.findAllCardsByTheme(1);
 
-//        themeJdbcRepository.save("History");
-//        themeJdbcRepository.remove(4);
 
-//        cardJdbcRepository.save(2, "FWFWFWF", "12345", true);
-//        cardJdbcRepository.remove(17);
-//        cardJdbcRepository.updateIsLearned(1, true);
 
             System.out.println(allThemes);
             System.out.println(allCardsByTheme);

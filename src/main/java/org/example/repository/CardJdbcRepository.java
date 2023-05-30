@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CardJdbcRepository implements ICardRepository {
+public class CardJdbcRepository implements CardRepository {
     private final DataSource db;
 
     public CardJdbcRepository(DataSource db) {

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00157e1b-58b6-4478-98f2-e17ff8690663" name="Changes" comment="add logback.xml&#10;fix hikari" />
+    <list default="true" id="00157e1b-58b6-4478-98f2-e17ff8690663" name="Changes" comment="add logback.xml&#10;fix hikari">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +46,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/antonfedoseev/IdeaProjects/Flashcards&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -157,7 +160,12 @@
       <workItem from="1684952394939" duration="1416000" />
       <workItem from="1685028004041" duration="11260000" />
       <workItem from="1685115777779" duration="1945000" />
-      <workItem from="1685132909346" duration="4682000" />
+      <workItem from="1685132909346" duration="5906000" />
+      <workItem from="1685140425246" duration="19000" />
+      <workItem from="1685140447083" duration="16000" />
+      <workItem from="1685292338342" duration="482000" />
+      <workItem from="1685297484479" duration="398000" />
+      <workItem from="1685299808395" duration="379000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1683551466873</created>
@@ -299,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685137593487</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add logback.xml&#10;fix hikari">
+      <created>1685137612491</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1685137612491</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
